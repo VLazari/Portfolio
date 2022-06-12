@@ -42,20 +42,30 @@ body {
 	background-blend-mode: overlay; */
 }
 
-.logo {
+.logo,
+.skills ul {
 	font: 2rem var(--header-font);
 	font-weight: bold;
 	color: var(--color-3);
 	text-shadow: -1px 0 var(--color-2), 0 1px var(--color-2), 1px 0 var(--color-2), 0 -1px var(--color-2);
 }
 
-ul {
+.header ul {
 	list-style: none;
 }
 
 a {
 	text-decoration: none;
 	cursor: pointer;
+}
+
+h2 {
+	margin: 50px;
+	padding: 50px;
+	text-align: center;
+	color: var(--color-2);
+	font: 600 3rem var(--header-font);
+	opacity: 80%;
 }
 
 .main-menu {
@@ -90,6 +100,7 @@ a {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
 .photo-cover {
 	width: 400px;
 	height: 500px;
@@ -98,13 +109,12 @@ a {
 	background-size: cover;
 	background-position-y: -10px;
 	background-repeat: no-repeat;
-	/* border: 1px solid var(--color-2); */
-	/* box-shadow: 3px 3px 2px var(--color-2); */
 	border-radius: 15px;
 	opacity: 80%;
 }
 
-.intro-container {
+.intro-container,
+.about-me {
 	width: fit-content;
 	height: 500px;
 	padding: 50px;
@@ -114,7 +124,8 @@ a {
 	line-height: 3.5rem;
 }
 
-.intro {
+.intro,
+.about-me p {
 	color: var(--color-1);
 	font-size: 2rem;
 }
@@ -124,38 +135,27 @@ a {
 	font-size: 3rem;
 	font-weight: bold;
 	letter-spacing: 5px;
-	/* text-shadow: -1px 0 var(--color-3), 0 1px var(--color-3), 1px 0 var(--color-3), 0 -1px var(--color-3); */
 	text-shadow: 0 0 15px var(--color-2);
-}
-
-#work h2 {
-	margin: 50px;
-	text-align: center;
-	color: var(--color-2);
-	font: 600 2.5rem var(--header-font);
-	/* text-shadow: -1px 0 var(--color-3), 0 1px var(--color-3), 1px 0 var(--color-3), 0 -1px var(--color-3); */
-	opacity: 80%;
 }
 
 .projects {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	align-content: space-between;
 }
 
 .project {
 	position: relative;
-	width: 400px;
-	height: 300px;
+	width: 600px;
+	height: 400px;
+	margin-bottom: 100px;
 }
 
 .description {
 	height: 100%;
 	display: grid;
-	grid-template-columns: auto, 1fr, auto;
-	/* display: flex;
-	flex-direction: column;
-	justify-content: space-around; */
+	grid-template-columns: auto, 1fr, 1fr;
 	padding: 10px;
 	color: var(--color-1);
 	background-color: var(--main-bg-color);
@@ -165,29 +165,37 @@ a {
 .description h6 {
 	text-align: center;
 	margin: 10px;
-	font: 1.5rem var(--main-font);
+	font: 1.8rem var(--main-font);
 	color: var(--color-2);
+	opacity: 70%;
 }
 
 .description p {
+	font-size: 1.3rem;
 	text-align: left;
 	text-indent: 20px;
-	line-height: 20px;
+	line-height: 30px;
 	padding: 10px;
 }
 
 .description a {
-	display: block;
-	margin: 15px;
+	display: inline-block;
+	margin: 0 0 15px 30px;
+	padding: 15px;
 	color: var(--color-2);
-	opacity: 80%;
+	font-size: 1.3rem;
+	opacity: 70%;
+}
+
+.description a:hover {
+	opacity: 100%;
 }
 
 .cover {
 	position: absolute;
 	width: 100%;
-	height: 100%;
-	top: 0;
+	height: 80%;
+	bottom: 0;
 	left: 0;
 	background-position: top;
 	background-size: cover;
@@ -195,23 +203,47 @@ a {
 	border: 1px solid var(--color-2);
 	border-radius: 15px 15px 0 0;
 	transition: 1s;
-	transform: translateY(60px);
 	z-index: 1;
 	cursor: pointer;
 }
 
 .museum {
-	background-image: url(/img/project-museum.png);
+	background-image: url(/img/project-museum.jpg);
 }
 
 .shop {
-	background-image: url(/img/project-shop.png);
+	background-image: url(/img/project-shop.jpg);
 }
 
 .blog {
-	background-image: url(/img/project-blog.png);
+	background-image: url(/img/project-blog.jpg);
 }
 
 .project:hover .cover {
-	transform: translateY(295px);
+	height: 50px;
+}
+
+#about {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.about-me {
+	max-width: 800px;
+	height: auto;
+	padding: 0;
+}
+
+.skills {
+}
+
+.skills ul {
+	color: var(--color-1);
+	font-weight: normal;
+	letter-spacing: 5px;
+}
+
+.skills ul li {
+	padding-bottom: 20px;
 }
