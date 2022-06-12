@@ -34,12 +34,6 @@ body {
 	align-items: center;
 	background-color: rgba(12, 24, 41, 0.85);
 	z-index: 2;
-	/* background-image: url("/img/header-bg.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: rgba(0, 0, 0, 0.7);
-	background-blend-mode: overlay; */
 }
 
 .logo,
@@ -66,6 +60,12 @@ h2 {
 	color: var(--color-2);
 	font: 600 3rem var(--header-font);
 	opacity: 80%;
+}
+
+hr {
+	width: 80%;
+	margin: 30px auto;
+	border-color: var(--color-2);
 }
 
 .main-menu {
@@ -109,7 +109,7 @@ h2 {
 	background-size: cover;
 	background-position-y: -10px;
 	background-repeat: no-repeat;
-	border-radius: 15px;
+	border-radius: 50%;
 	opacity: 80%;
 }
 
@@ -246,4 +246,10 @@ h2 {
 
 .skills ul li {
 	padding-bottom: 20px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 300px;
+	padding: 30px;
 }
